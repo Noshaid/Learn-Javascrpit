@@ -116,3 +116,37 @@ changeVal(arr1, arr2)
 console.log(arr1) 
 console.log(arr2)
 ````
+
+
+
+```
+//You have to find indices of two such elements so that after adding sum is equal to target
+//input = [2,5,8,7]
+//target = 9
+//output = 0,3
+
+//input = [2,1,8,4]
+//target = 5
+//output = 1,3
+
+//input = [0,4,2,1]
+//target = 2
+//output = 1,2
+
+const arr = [2,5,8,7]
+const target = 3
+
+function getArr() {
+    let dict = new Map();
+    for (let i = 0; i < arr.length; i++) {
+        let difference = target - arr[i];
+        if (dict.has(difference)) {
+            return [dict.get(difference), arr[i]];
+        } else {
+            dict.set(arr[i], i); 
+        }
+    }
+    return []
+}
+console.log(getArr())
+```
