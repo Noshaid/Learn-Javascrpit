@@ -131,10 +131,10 @@ console.log(arr2)
 
 //input = [0,4,2,1]
 //target = 2
-//output = 1,2
+//output = 0,2
 
 const arr = [2,5,8,7]
-const target = 3
+const target = 9
 
 function getArr() {
     let dict = new Map();
