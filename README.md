@@ -120,7 +120,7 @@ console.log(arr2)
 
 
 ```
-//You have to find indices of two such elements so that after adding sum is equal to target
+//You have to find indexes of two such elements so that after adding sum is equal to target
 //input = [2,5,8,7]
 //target = 9
 //output = 0,3
@@ -130,8 +130,8 @@ console.log(arr2)
 //output = 1,3
 
 //input = [0,4,2,1]
-//target = 2
-//output = 0,2
+//target = 3
+//output = 2,3
 
 const arr = [2,5,8,7]
 const target = 9
