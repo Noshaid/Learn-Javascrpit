@@ -150,3 +150,33 @@ function getArr() {
 }
 console.log(getArr())
 ```
+
+
+```
+Given a string, determine if it has balanced brackets. 
+A couple of string examples might be "This is a [balanced bracket]" or 
+"This [[is not] a balanced bracket". 
+More interesting examples might involve multiple types of bracket-like openers including parentheses and 
+curly brackets such as , "This ( is a really {interesting}) example" .
+
+
+let stackArr = []
+
+for(let i =0; i<str.length; i++) {
+    if(str[i] === '(' || str[i] === '{' || str[i] === '[') {
+        stackArr.push(str[i])
+    } else if(str[i] === ')' && stackArr[stackArr.length-1] === '(') {
+        stackArr.pop()
+    } else if(str[i] === '}' && stackArr[stackArr.length-1] === '{') {
+        stackArr.pop()
+    } else if(str[i] === ']' && stackArr[stackArr.length-1] === '[') {
+        stackArr.pop()
+    }
+}
+
+if (stackArr.length == 0) {
+    console.log("balanced bracket")
+} else {
+    console.log("not balanced bracket")
+}
+```
